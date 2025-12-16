@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portafolio | Miguel Ángel Ávila Maldonado</title>
+    <!-- Iconos de FontAwesome para redes sociales (backup) -->
+    <link rel="stylesheet" href="./css/styles.css">
+</head>
+<body>
+
+    <!-- NAVEGACIÓN -->
+    <header>
+        <nav>
+            <div class="logo">Miguel <span>Avila</span>.</div>
+            <div class="nav-links">
+                <a href="#inicio">Inicio</a>
+                <a href="#proyectos">Proyectos</a>
+                <a href="#habilidades">Habilidades</a>
+                <a href="#certificaciones">Certificaciones</a>
+                <a href="#contacto">Contacto</a> <!-- Enlace al footer -->
+            </div>
+        </nav>
+    </header>
+
+    <!-- SECCIÓN HERO (Presentación) -->
+    <section class="hero" id="inicio">
+        <!-- Columna Izquierda: Texto -->
+        <div class="hero-text">
+            <h2>Ingeniero de Sistemas & Desarrollador Full Stack</h2>
+            <h1>Hola, soy <br>Miguel Ángel Ávila</h1>
+            <p>
+                Especialista en convertir problemas complejos en soluciones de software elegantes y eficientes. 
+                Con una sólida base en arquitectura de sistemas y una pasión por la innovación tecnológica.
+            </p>
+            
+            <!-- Botones de Redes Sociales -->
+            <div class="social-container">
+                <!-- WhatsApp -->
+                <a href="https://api.whatsapp.com/send/?phone=5517176718&text=Hola%21+Quiero+mas+informes+sobre+ti+y+tus+proyectos&type=phone_number&app_absent=0" class="social-icon icon-wsp" target="_blank" title="WhatsApp">
+                    <svg viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M13.601 2.326A7.854 7.854 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.933 7.933 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.898 7.898 0 0 0 13.6 2.326zM7.994 14.521a6.573 6.573 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.557 6.557 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592zm3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.729.729 0 0 0-.529.247c-.182.198-.691.677-.691 1.654 0 .977.71 1.916.81 2.049.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232z"></path>
+                    </svg>
+                </a>
+                
+                <!-- GitHub -->
+                <a href="https://github.com/avilamiguel1007" class="social-icon icon-github" target="_blank" title="GitHub">
+                    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"></path>
+                    </svg>
+                </a>
+                
+                <!-- LinkedIn -->
+                <a href="https://www.linkedin.com/in/miguel-avila-997b20397/" class="social-icon icon-in" target="_blank" title="LinkedIn">
+                    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"></path>
+                    </svg>
+                </a>
+
+                <!-- Email - ENLACE ACTUALIZADO CON mailto: -->
+                <a href="mailto:avilamiguel1007@gmail.com?body=Necesito%20saber%20mas%20acerca%20de%20ti%20y%20tus%20proyectos%3F" class="social-icon icon-email" title="Email">
+                    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"></path>
+                    </svg>
+                </a>
+            </div>
+        </div>
+
+        <!-- Columna Derecha: Imagen con clase yo2 para los estilos de borde -->
+        <div class="hero-image yo2">
+            <!-- NOTA: Reemplazar src con la foto real de Miguel -->
+            <img src="./assets/yo.webp" alt="Foto de Miguel Ángel Ávila">
+        </div>
+    </section>
+
+    <!-- SECCIÓN PROYECTOS -->
+    <section class="portfolio" id="proyectos">
+        <h2 class="section-title"><span>Proyectos Destacados</span></h2>
+
+        <div class="grid-container">
+
+            <!-- PROYECTO 1 -->
+            <div class="card">
+                <div class="card-img-container">
+                    <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEh6EWkDyxKwxZSzjO4FiKOO_xA2Y3hszdpowVWeNVrY2e5sv8XNmk_EdnWyYHoF16Vu2n0iAyXBk95hnyHzX-wVd6VHU8th3-vrsikMOVdyYVZW0Awxztm5Hp2VQTsLS-M5sR-ilMTt8CwM/s1600/HTML5+CSS+y+JavaScript.png" alt="1er Página web">
+                </div>
+                <div class="card-content">
+                    <h3>Primer Página Web</h3>
+                    <p>Acceso a mi primer página web donde estuve experimentando las bases de html5 y css.</p>
+                    <div class="tech-stack">
+                        <span class="tech-tag">JavaScript</span>
+                        <span class="tech-tag">Css</span>
+                        <span class="tech-tag">HTML5</span>
+                    </div>
+                    <a href="https://avilamiguel1007.github.io/MiguelAvila/" class="card-btn">Ver Página</a>
+                </div>
+            </div>
+
+            <!-- PROYECTO 2 -->
+            <div class="card">
+                <div class="card-img-container">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRRiMw2Yu6w_1tFB83bgpugTFYzmzZBDonk3w&s" alt="Restaurante">
+                </div>
+                <div class="card-content">
+                    <h3>Restaurante Casa Mexa(grupal)</h3>
+                    <p>Fue mi primer pagina donde trabajé en equipo subiendo archivos usando git bash.</p>
+                    <div class="tech-stack">
+                        <span class="tech-tag">JavaScript</span>
+                        <span class="tech-tag">Css</span>
+                        <span class="tech-tag">HTML5</span>
+                    </div>
+                    <a href="https://avilamiguel1007.github.io/Mosqueteros/" class="card-btn">Ver Página</a>
+                </div>
+            </div>
+
+            <!-- PROYECTO 3 -->
+            <div class="card">
+                <div class="card-img-container">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRRiMw2Yu6w_1tFB83bgpugTFYzmzZBDonk3w&s" alt="Reconocimiento Facial">
+                </div>
+                <div class="card-content">
+                    <h3>Casa Mexa (individual)</h3>
+                    <p>Primera version de mi pagina de casa mexa.</p>
+                    <div class="tech-stack">
+                        <span class="tech-tag">JavaScript</span>
+                        <span class="tech-tag">Css</span>
+                        <span class="tech-tag">HTML5</span>
+                    </div>
+                    <a href="https://avilamiguel1007.github.io/Mosqueteros/" class="card-btn">Ver Página</a>
+                </div>
+            </div>
+
+            <!-- PROYECTO 4 -->
+            <div class="card">
+                <div class="card-img-container">
+                    <img src="./assets/Juego-_1_.webp" alt="Galaga">
+                </div>
+                <div class="card-content">
+                    <h3>Juego Galaga</h3>
+                    <p>Experimentando con mi primer juego hecho con html5 y css, ideal para tener horas de diversión.</p>
+                    <div class="tech-stack">
+                        <span class="tech-tag">Css</span>
+                        <span class="tech-tag">HTML5</span>
+                    </div>
+                    <a href="https://avilamiguel1007.github.io/Juego/" class="card-btn">Comienza a Jugar</a>
+                </div>
+            </div>
+
+            <!-- PROYECTO 5 -->
+            <div class="card">
+                <div class="card-img-container">
+                    <img src="./assets/Finanzas-_1_.webp" alt="Gestor de Tareas">
+                </div>
+                <div class="card-content">
+                    <h3>Página Finanzas</h3>
+                    <p>Un recurso para matener una economia saludable con estadisticas y proyecciones a futuro.</p>
+                    <div class="tech-stack">
+                        <span class="tech-tag">React</span>
+                        <span class="tech-tag">Js</span>
+                        <span class="tech-tag">Vite</span>
+                        <span class="tech-tag">Tailwind</span>
+                        <span class="tech-tag">Html5</span>
+                    </div>
+                    <a href="https://avilamiguel1007.github.io/Finanzas/" class="card-btn">Ver Página</a>
+                </div>
+            </div>
+
+            <!-- PROYECTO 6 -->
+            <div class="card">
+                <div class="card-img-container">
+                    <img src="./assets/IA-Ingenieria-_1_.webp" alt="Sistema Médico">
+                </div>
+                <div class="card-content">
+                    <h3>Asistente IA para Ingeniería</h3>
+                    <p>Un asistente de inteligencia artificial diseñado especialmente para estudiantes de ingenieria.</p>
+                    <div class="tech-stack">
+                        <span class="tech-tag">Python</span>
+                        <span class="tech-tag">Pandas</span>
+                    </div>
+                    <a href="https://colab.research.google.com/drive/1JsvSaw2YtraM08xrCFGEqejlMizoByjR?usp=sharing" class="card-btn">Ver en Google Colab</a>
+                </div>
+            </div>
+
+            <!-- PROYECTO 7 -->
+            <div class="card">
+                <div class="card-img-container">
+                    <img src="./assets/RNS-_1_.webp" alt="Cloud API">
+                </div>
+                <div class="card-content">
+                    <h3>Red Neuronal Simple</h3>
+                    <p>Aquí experimenté mi primera red Neuronal que se usa para convertir de grados farenheit a celsius.</p>
+                    <div class="tech-stack">
+                        <span class="tech-tag">Python</span>
+                    </div>
+                    <a href="https://colab.research.google.com/drive/1uCoYQmvbpXYbQmFFNFQ4uoVBTmz3mmYj?usp=sharing" class="card-btn">Ver en Google Colab</a>
+                </div>
+            </div>
+
+            <!-- PROYECTO 8 -->
+            <div class="card">
+                <div class="card-img-container">
+                    <img src="./assets/RNC-_1_.webp" alt="Herramienta Ciberseguridad">
+                </div>
+                <div class="card-content">
+                    <h3>Red Neuronal 2 Neuronas</h3>
+                    <p>Es una red neuronal mas compleja que la anterior, donde será mas precisa que la versión anterior al momento de convertir grados farenheit a celsius.</p>
+                    <div class="tech-stack">
+                        <span class="tech-tag">Python</span>
+                    </div>
+                    <a href="https://colab.research.google.com/drive/1q0K7b1Iic4MNjwslt7zbCul1gVF710IG?usp=sharing" class="card-btn">Ver en Google Colab</a>
+                </div>
+            </div>
+                <!-- PROYECTO 9 -->
+            <div class="card">
+                <div class="card-img-container">
+                    <img src="./assets/compiladores.webp" alt="Cloud API">
+                </div>
+                <div class="card-content">
+                    <h3>Compiladores</h3>
+                    <p>Diapositivas referente al tema de Compiladores, donde se explican conceptos básicos que todo ingeniero debe saber sobre el tema.</p>
+                    <div class="tech-stack">
+                   <span class="tech-tag">React</span>
+                        <span class="tech-tag">Js</span>
+                        <span class="tech-tag">Vite</span>
+                        <span class="tech-tag">Tailwind</span>
+                        <span class="tech-tag">Html5</span>
+                    </div>
+                    <a href="#" class="card-btn">Ver Página</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- NUEVA SECCIÓN: HABILIDADES (Lenguajes de Programación) -->
+    <section class="skills-section" id="habilidades">
+        <h2 class="section-title"><span>Habilidades Técnicas</span></h2>
+        <div class="skills-container">
+            <p style="color: var(--gray); margin-bottom: 2rem; text-align: center;">Lenguajes de programación en los que tengo experiencia.</p>
+
+            <div class="skills-grid">
+                
+                <!-- Python -->
+                <div class="skill-card">
+                    <div class="skill-icon skill-python">P</div>
+                    <h4>Python</h4>
+                </div>
+                
+                <!-- Java -->
+                <div class="skill-card">
+                    <div class="skill-icon skill-java">J</div>
+                    <h4>Java</h4>
+                </div>
+                
+                <!-- C++ -->
+                <div class="skill-card">
+                    <div class="skill-icon skill-cpp">C++</div>
+                    <h4>C++</h4>
+                </div>
+                
+                <!-- HTML -->
+                <div class="skill-card">
+                    <div class="skill-icon skill-html">H</div>
+                    <h4>HTML/CSS</h4>
+                </div>
+
+            </div>
+        </div>
+    </section>
+    
+    <!-- NUEVA SECCIÓN: CERTIFICACIONES -->
+    <section class="certs-section" id="certificaciones">
+        <h2 class="section-title"><span>Certificaciones</span></h2>
+        <div class="certs-grid">
+            
+            <!-- Certificación Microsoft -->
+            <div class="cert-card">
+                <div class="cert-header">
+                    <div class="cert-logo">
+                        <!-- Icono Placeholder de Microsoft -->
+                        <img src="https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcSEIs1FDEku380a3xNznFWy_vBK9LMBDKPLzNJYhe4v1ffqrsxB" alt="Logo de Microsoft">
+                    </div>
+                    <h3>Microsoft Certified</h3>
+                </div>
+                <div class="cert-image-container">
+                    <!-- Imagen relacionada con Microsoft (Azure/Cloud) - Imagen cargada por el usuario -->
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQmbYex_7olVkovIphxoLTb8TW2_tEwHcVIhQ&s" alt="Certificado de Microsoft Azure">
+                </div>
+            </div>
+
+            <!-- Certificación Google -->
+            <div class="cert-card">
+                <div class="cert-header">
+                    <div class="cert-logo">
+                        <!-- Icono Placeholder de Google -->
+                        <img src="data:image/png;base64,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" alt="Logo de Google">
+                    </div>
+                    <h3>Google Certified</h3>
+                </div>
+                <div class="cert-image-container">
+                    <!-- Imagen similar generada para Google (GCP/AI) -->
+                    <img src="https://1000marcas.net/wp-content/uploads/2020/02/logo-Google.png" alt="Certificado de Google AI">
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer id="contacto">
+        <h3 style="margin-bottom: 1.5rem; color: var(--primary);">Conecta conmigo</h3>
+        <!-- REDES SOCIALES DUPLICADAS EN EL FOOTER -->
+        <div class="social-container">
+            <!-- WhatsApp -->
+            <a href="https://api.whatsapp.com/send/?phone=5517176718&text=Hola%21+Quiero+mas+informes+de+la+empresa&type=phone_number&app_absent=0" class="social-icon icon-wsp" target="_blank" title="WhatsApp">
+                <svg viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M13.601 2.326A7.854 7.854 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.933 7.933 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.898 7.898 0 0 0 13.6 2.326zM7.994 14.521a6.573 6.573 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.557 6.557 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592zm3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.729.729 0 0 0-.529.247c-.182.198-.691.677-.691 1.654 0 .977.71 1.916.81 2.049.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232z"></path>
+                </svg>
+            </a>
+            
+            <!-- GitHub -->
+            <a href="https://github.com/avilamiguel1007" class="social-icon icon-github" target="_blank" title="GitHub">
+                <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"></path>
+                </svg>
+            </a>
+                
+            <!-- LinkedIn -->
+            <a href="https://www.linkedin.com/in/miguel-avila-997b20397/" class="social-icon icon-in" target="_blank" title="LinkedIn">
+                <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"></path>
+                </svg>
+            </a>
+
+            <!-- Email - ENLACE ACTUALIZADO CON mailto: -->
+            <a href="mailto:avilamiguel1007@gmail.com?body=Necesito%20saber%20mas%20acerca%20de%20ti%20y%20tus%20proyectos%3F" class="social-icon icon-email" title="Email">
+                <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"></path>
+                    </svg>
+            </a>
+        </div>
+
+        <p>© 2025 Miguel Ángel Ávila Maldonado. Todos los derechos reservados.</p>
+        <p style="font-size: 0.9rem; color: #94a3b8; margin-top: 0.5rem;">Diseñado con HTML5 y CSS3 Puro</p>
+    </footer>
+
+</body>
+</html>

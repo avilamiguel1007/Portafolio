@@ -1,0 +1,568 @@
+        /* ====== VARIABLES Y RESET ====== */
+        :root {
+            --primary: #2563eb;       /* Azul vibrante */
+            --primary-dark: #1e40af;  /* Azul oscuro para hover */
+            --dark: #0f172a;          /* Usado para texto principal sobre fondo claro */
+            --light: #f8fafc;         /* Fondos claros */
+            --gray: #9ca3af;          /* Color de texto más claro sobre fondo oscuro */
+            --white: #ffffff;
+            --bg-dark: #333;          /* Color de fondo general solicitado */
+            --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+            --transition: all 0.3s ease;
+        }
+
+        html {
+            scroll-behavior: smooth; /* Desplazamiento suave al dar click en enlaces */
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, Helvetica, sans-serif; /* Fuente solicitada */
+        }
+
+        /* APLICANDO EL NUEVO ESTILO DE FONDO Y TEXTO GENERAL */
+        body {
+            background-color: var(--bg-dark); /* Fondo gris oscuro */
+            color: var(--white);             /* Texto blanco por defecto */
+            line-height: 1.6;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        /* ====== HEADER / NAV ====== */
+        header {
+            background: rgba(51, 51, 51, 0.95); /* Fondo oscuro semitransparente para el header */
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+
+        nav {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 2rem;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--white);
+        }
+
+        .logo span {
+            color: var(--primary);
+        }
+
+        .nav-links a {
+            margin-left: 2rem;
+            font-weight: 500;
+            transition: var(--transition);
+            color: var(--white);
+        }
+
+        .nav-links a:hover {
+            color: var(--primary);
+        }
+
+        /* ====== HERO SECTION (2 COLUMNAS) ====== */
+        .hero {
+            padding: 8rem 2rem 4rem; 
+            max-width: 1200px;
+            margin: 0 auto;
+            min-height: 90vh;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 4rem;
+        }
+
+        .hero-text {
+            flex: 1;
+            animation: fadeInStart 1s ease-out;
+        }
+
+        .hero-text h1 {
+            font-size: 3rem;
+            line-height: 1.2;
+            margin-bottom: 1rem;
+            color: var(--white);
+        }
+
+        .hero-text h2 {
+            font-size: 1.5rem;
+            color: var(--primary);
+            margin-bottom: 1.5rem;
+            font-weight: 600;
+        }
+
+        .hero-text p {
+            font-size: 1.1rem;
+            color: var(--gray);
+            margin-bottom: 2rem;
+            max-width: 600px;
+        }
+
+        /* ====== IMAGEN DE PERFIL (yo2 - Estilos corregidos) ====== */
+        .hero-image {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            position: relative;
+        }
+        
+        /* Contenedor de la imagen con efecto (usando la clase 'yo2') */
+        .yo2 {
+            border-radius: 40%; 
+            margin: 1.5rem auto;
+            max-width: 320px;
+            display: block;
+            position: relative;
+            overflow: hidden;
+            transition: transform 0.4s ease, box-shadow 0.4s ease;
+            box-shadow: 0 8px 24px rgba(0,0,0,0.4); 
+            cursor: pointer;
+        }
+
+        /* Efecto hover con movimiento y sombra */
+        .yo2:hover {
+            transform: scale(1.05);
+            box-shadow: 0 12px 32px rgba(0,0,0,0.5);
+        }
+
+        /* Overlay degradado para desvanecer bordes - HECHO MÁS SUTIL */
+        .yo2::after {
+            content: "";
+            position: absolute;
+            inset: 0;
+            border-radius: inherit;
+            /* Degradado sutil. Se ha reducido la opacidad final a 0.02 */
+            background: radial-gradient(circle, rgba(255,255,255,0) 70%, rgba(255,255,255,0.02) 100%);
+            pointer-events: none;
+        }
+
+        /* Sutil borde con efecto glass - SE ELIMINA BACKDROP-FILTER (CAUSA PRINCIPAL DEL DESENFOQUE) */
+        .yo2::before {
+            content: "";
+            position: absolute;
+            inset: 0;
+            border-radius: inherit;
+            border: 1px solid rgba(255,255,255,0.15); /* Borde un poco más visible */
+            background: rgba(255,255,255,0.01); /* Opacidad muy baja para el "glass" */
+            /* backdrop-filter: blur(2px); <-- ELIMINADO para quitar el efecto borroso */
+            z-index: 1;
+            pointer-events: none;
+        }
+
+        .hero-image img {
+            width: 100%;
+            display: block;
+            max-width: 450px;
+            border-radius: inherit; 
+        }
+        
+        /* ====== ESTILOS DE REDES SOCIALES (Adaptados para el nuevo fondo oscuro) ====== */
+        .social-container {
+            display: flex;
+            gap: 1rem;
+            margin-top: 1rem;
+            align-items: center;
+        }
+
+        .social-icon {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background-color: var(--bg-dark); /* Fondo del icono oscuro */
+            border: 2px solid var(--primary); /* Borde visible */
+            transition: var(--transition);
+            box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+            color: var(--white); /* Color del icono por defecto */
+        }
+
+        .social-icon svg {
+            width: 24px;
+            height: 24px;
+            fill: currentColor;
+            transition: fill 0.3s ease;
+        }
+        
+        /* Colores Específicos por Red Social */
+        
+        /* WhatsApp */
+        .icon-wsp {
+            border-color: #25D366;
+            color: #25D366;
+        }
+        .icon-wsp:hover {
+            background-color: #25D366;
+            color: white;
+            transform: translateY(-5px);
+            box-shadow: 0 10px 15px -3px rgba(37, 211, 102, 0.4);
+        }
+
+        /* GitHub */
+        .icon-github {
+            border-color: var(--white);
+            color: var(--white);
+        }
+        .icon-github:hover {
+            background-color: var(--white);
+            color: var(--bg-dark);
+            transform: translateY(-5px);
+            box-shadow: 0 10px 15px -3px rgba(255, 255, 255, 0.3);
+        }
+
+        /* LinkedIn */
+        .icon-in {
+            border-color: #0077b5;
+            color: #0077b5;
+        }
+        .icon-in:hover {
+            background-color: #0077b5;
+            color: white;
+            transform: translateY(-5px);
+            box-shadow: 0 10px 15px -3px rgba(0, 119, 181, 0.4);
+        }
+
+        /* Email */
+        .icon-email {
+            border-color: #ea4335;
+            color: #ea4335;
+        }
+        .icon-email:hover {
+            background-color: #ea4335;
+            color: white;
+            transform: translateY(-5px);
+            box-shadow: 0 10px 15px -3px rgba(234, 67, 53, 0.4);
+        }
+
+        /* ====== SECCIÓN DE HABILIDADES ====== */
+        .skills-section {
+            padding: 4rem 2rem;
+            background: #2b2b2b;
+        }
+
+        .skills-container {
+            max-width: 1000px;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .skills-grid {
+            margin-top: 2rem;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 2rem;
+            width: 100%;
+        }
+
+        .skill-card {
+            background: #444;
+            padding: 2rem 1rem;
+            border-radius: 12px;
+            text-align: center;
+            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
+            border: 2px solid transparent;
+            transition: var(--transition);
+        }
+        
+        .skill-card:hover {
+            transform: translateY(-5px);
+            border-color: var(--primary);
+            box-shadow: 0 12px 20px rgba(0, 0, 0, 0.4);
+        }
+
+        /* Iconos de Lenguajes (SVG de placeholder simple) */
+        .skill-icon {
+            margin: 0 auto 1rem;
+            width: 60px;
+            height: 60px;
+            background: var(--primary);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--white);
+            font-size: 2rem;
+            font-weight: bold;
+        }
+        
+        .skill-card h4 {
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: var(--white);
+        }
+
+        /* Colores específicos para los iconos de lenguajes */
+        .skill-python { background: #306998; }
+        .skill-java { background: #E94E31; }
+        .skill-cpp { background: #00599c; }
+        .skill-html { background: #e44d26; }
+
+
+        /* ====== SECCIÓN DE CERTIFICACIONES ====== */
+        .certs-section {
+            padding: 4rem 2rem;
+            background: var(--bg-dark); /* Mismo fondo que el body */
+        }
+        
+        .certs-grid {
+            max-width: 900px;
+            margin: 2rem auto 0;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .cert-card {
+            background: #444;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+            transition: var(--transition);
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            border: 1px solid #555;
+        }
+        
+        .cert-card:hover {
+            transform: scale(1.03);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+        }
+
+        .cert-header {
+            padding: 1.5rem 1rem;
+            background: #3a3a3a;
+            color: var(--white);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        
+        .cert-logo {
+            width: 80px;
+            height: 80px;
+            margin-bottom: 0.75rem;
+            border-radius: 50%;
+            background-color: var(--white);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .cert-logo img {
+            max-width: 60%;
+            height: auto;
+            object-fit: contain;
+        }
+
+        .cert-card h3 {
+            font-size: 1.5rem;
+            font-weight: 700;
+        }
+
+        .cert-image-container {
+            height: 150px;
+            background-color: #555;
+            overflow: hidden;
+        }
+
+        .cert-image-container img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            opacity: 0.8;
+        }
+
+
+        /* ====== PORTAFOLIO (GRID 8 TARJETAS) ====== */
+        .portfolio {
+            padding: 4rem 2rem;
+            background: #2b2b2b; /* Fondo un poco más claro que el body para contraste */
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 3rem;
+            color: var(--white);
+        }
+
+        .section-title span {
+            border-bottom: 4px solid var(--primary);
+        }
+
+        .grid-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        /* Diseño de Tarjeta adaptado al tema oscuro */
+        .card {
+            background: #444; /* Fondo de tarjeta más oscuro */
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+            border: 1px solid #555;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.3);
+        }
+
+        .card-img-container {
+            height: 200px;
+            overflow: hidden;
+            background-color: #3a3a3a; 
+        }
+
+        .card-img-container img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s;
+        }
+
+        .card:hover .card-img-container img {
+            transform: scale(1.1);
+        }
+
+        .card-content {
+            padding: 1.5rem;
+            display: flex;
+            flex-direction: column;
+            flex-grow: 1;
+        }
+
+        .card h3 {
+            font-size: 1.25rem;
+            margin-bottom: 0.5rem;
+            color: var(--white);
+        }
+
+        .card p {
+            font-size: 0.95rem;
+            color: var(--gray);
+            margin-bottom: 1rem;
+            flex-grow: 1;
+        }
+
+        /* Etiquetas de Tecnologías */
+        .tech-stack {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin-bottom: 1.5rem;
+        }
+
+        /* MODIFICACIÓN: Color de fondo para las etiquetas de tecnología */
+        .tech-tag {
+            background: #8D021F; /* Rojo Borgoña Solicitado */
+            color: var(--white);
+            padding: 0.25rem 0.75rem;
+            border-radius: 9999px; 
+            font-size: 0.75rem;
+            font-weight: 600;
+            text-transform: uppercase;
+        }
+
+        .card-btn {
+            display: block;
+            width: 100%;
+            text-align: center;
+            background: var(--primary);
+            color: var(--white);
+            padding: 0.75rem;
+            border-radius: 6px;
+            font-weight: 600;
+            transition: var(--transition);
+        }
+
+        .card-btn:hover {
+            background: var(--primary-dark);
+        }
+
+        /* ====== FOOTER ====== */
+        footer {
+            background: #222; /* Fondo del footer aún más oscuro */
+            color: var(--white);
+            text-align: center;
+            padding: 3rem 2rem 2rem; 
+            margin-top: auto;
+        }
+        
+        /* Centrar redes sociales en el footer */
+        footer .social-container {
+            justify-content: center;
+            margin-bottom: 2rem;
+            margin-top: 0;
+        }
+
+        /* Ajuste de color para iconos en footer (ya que el fondo es oscuro) */
+        footer .social-icon {
+            background-color: #222; 
+            border: 2px solid var(--gray); /* Borde más sutil */
+        }
+        
+        footer .icon-github {
+            border-color: var(--gray);
+            color: var(--white);
+        }
+
+
+        /* ====== RESPONSIVE MEDIA QUERIES ====== */
+        @media (max-width: 900px) {
+            .hero {
+                flex-direction: column-reverse; 
+                text-align: center;
+                padding-top: 6rem;
+                gap: 2rem;
+            }
+
+            .hero-text {
+                padding: 0 1rem;
+            }
+
+            .social-container {
+                justify-content: center;
+            }
+
+            /* Se aplica el estilo 'yo2' en móvil también */
+            .yo2 {
+                max-width: 250px;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .skills-grid, .certs-grid {
+                grid-template-columns: 1fr; /* Columna única en móvil */
+            }
+        }
+
+        @keyframes fadeInStart {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
